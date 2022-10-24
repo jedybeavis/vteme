@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import AddForm from "./component/AddForm";
+
 
 
 export class Blog extends Component {
@@ -67,10 +69,17 @@ export class Blog extends Component {
 
         return(
             <Container fluid>
+                <h2>Добавить пост</h2>
+                <AddForm />
+                <hr></hr>
                 <h2>Посты</h2>
                 <Row xs={1} lg={2} gap={3}>
                     {blogPosts}
                 </Row>
+                <Button className='mb-5 d-block' variant="primary">Создать пост</Button>
+                
+                
+                
                 <h2>Пользователи</h2>
                 <Row className='mb-3'>
                     {users}
