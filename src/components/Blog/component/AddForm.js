@@ -7,7 +7,7 @@ export default class AddForm extends Component {
         titleValue:'',
         textValue:''
     }
-    postTitleChange = e => {
+    postTitleChange = (e) => {
         this.setState({
             titleValue: e.target.value
         })
@@ -27,7 +27,6 @@ export default class AddForm extends Component {
             liked: false
         }
         this.props.AddNewPost(post);
-        console.log(post)
     }
   render() {
     return (
