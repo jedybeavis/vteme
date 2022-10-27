@@ -21,7 +21,6 @@ export default class AddForm extends Component {
     CreatePost = (e) =>{
         e.preventDefault();
         const post = {
-            id: this.props.blogArr.length+1,
             title: this.state.titleValue,
             description: this.state.textValue,
             liked: false
