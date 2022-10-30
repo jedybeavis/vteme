@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "title": "Post1",
+      "description": "Lorem Ipsum",
+      "likeCount": 40,
+      "liked": false,
+      "id": "1"
+    },{
+      "title": "Title2",
+      "description": "lorem ",
+      "likeCount": 40,
+      "liked": false,
+      "id": "2"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

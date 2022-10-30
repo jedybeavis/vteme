@@ -33,7 +33,7 @@ export class Blog extends Component {
     componentWillMount() {
     }
     allPosts = () => {
-        axios.get(`https://634fe5de78563c1d82b2e4e2.mockapi.io/posts`)
+        axios.get(`http://localhost:3004/posts`)
             .then((response) => {
                 this.setState({
                     blogArrAll: response.data
@@ -45,7 +45,7 @@ export class Blog extends Component {
     }
 
     GetPosts = () => {
-        axios.get(`https://634fe5de78563c1d82b2e4e2.mockapi.io/posts?page=1&limit=${this.state.limitPosts}`)
+        axios.get(`http://localhost:3004/posts`)
             .then((response) => {
                 this.setState({
                     blogArr: response.data,
@@ -114,7 +114,7 @@ export class Blog extends Component {
             isPendind: true
         })
         if(window.confirm(`удалить: ${blogpost.title}`)){
-            axios.delete(`https://634fe5de78563c1d82b2e4e2.mockapi.io/posts/${blogpost.id}`)
+            axios.delete(`http://localhost:3004/posts/${blogpost.id}`)
                 .then(() => {
                     this.GetPosts();
                 })
